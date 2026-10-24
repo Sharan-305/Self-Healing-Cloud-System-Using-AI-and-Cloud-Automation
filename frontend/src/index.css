@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#070C18] text-slate-100;
+  }
+}
+
+/* Custom Scrollbar for Operations Dashboard */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1222;
+}
+::-webkit-scrollbar-thumb {
+  background: #1F2E4D;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #324874;
+}
+
+/* Pulse glow animation for active recovery */
+@keyframes healing-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(6, 182, 212, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+}
+
+.healing-pulse {
+  animation: healing-pulse 2s infinite;
+}
